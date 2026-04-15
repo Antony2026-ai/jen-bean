@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent { label 'worker' }
+}
+
 
     environment {
         IMAGE_NAME = "dockerbean"
@@ -7,8 +9,8 @@ pipeline {
         DOCKER_HUB_REPO = "kreajith2026/dockerbean"
 
         AWS_REGION = "us-east-1"
-        EB_APP_NAME = "docker-bean"
-        EB_ENV_NAME = "Docker-bean-env"
+        EB_APP_NAME = "final-bean-proj"
+        EB_ENV_NAME = "Final-bean-proj-env"
 
         S3_BUCKET = "jen-bean-deploy-2026"   
         ZIP_FILE = "deploy-${BUILD_NUMBER}.zip"
