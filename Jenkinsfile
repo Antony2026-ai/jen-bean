@@ -1,7 +1,6 @@
+
 pipeline {
     agent { label 'worker' }
-}
-
 
     environment {
         IMAGE_NAME = "dockerbean"
@@ -12,13 +11,11 @@ pipeline {
         EB_APP_NAME = "final-bean-proj"
         EB_ENV_NAME = "Final-bean-proj-env"
 
-        S3_BUCKET = "jen-bean-deploy-2026"   
+        S3_BUCKET = "jen-bean-deploy-2026"
         ZIP_FILE = "deploy-${BUILD_NUMBER}.zip"
     }
 
     stages {
-
-        
 
         stage('Build Docker Image') {
             steps {
@@ -110,6 +107,7 @@ EOF
         success {
             echo "Deployment SUCCESS 🚀"
         }
+
         failure {
             echo "Deployment FAILED ❌"
         }
