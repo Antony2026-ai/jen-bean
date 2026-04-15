@@ -8,8 +8,8 @@ pipeline {
         DOCKER_HUB_REPO = "kreajith2026/dockerbean"
 
         AWS_REGION = "us-east-1"
-        EB_APP_NAME = "final-bean-proj"
-        EB_ENV_NAME = "Final-bean-proj-env"
+        EB_APP_NAME = "bean-first-proj"
+        EB_ENV_NAME = "Bean-first-proj-env"
 
         S3_BUCKET = "jen-bean-deploy-2026"
         ZIP_FILE = "deploy-${BUILD_NUMBER}.zip"
