@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent { label 'worker' }
+}
+
 
     environment {
         IMAGE_NAME = "dockerbean"
